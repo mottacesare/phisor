@@ -7,7 +7,7 @@ Class layout{
 	}
 	
 	//
-	function createHeader($title){
+	function createHeader($def_project){
 		echo sprintf("	<!DOCTYPE html>
 				<html>
 				<head>
@@ -25,7 +25,7 @@ Class layout{
 				</head>
 				<body>
 					<!--TITLE-->
-					<h1>%s</h1>",$title,$title);
+					<h1>%s</h1>",$def_project,$def_project);
 	}
 	
 	//
@@ -40,19 +40,18 @@ Class layout{
 	}
 	
 	//
-	function createNav($nav,$active){
-		echo '	<div class="navbar navbar-default navbar-fixed-top">
+	function createNav($def_project,$nav,$active){
+		echo sprintf('	<div class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
-						<a href="../" class="navbar-brand">Bootswatch</a>
-						<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
+						<a href="../" class="navbar-brand">%s</a>
 					</div>
 					<div class="navbar-collapse collapse" id="navbar-main">
-						<ul class="nav navbar-nav">';
+						<ul class="nav navbar-nav navbar-left">
+							<li><a href="http://www.phisor.it/" target="_blank">%s</a></li>
+						</ul>
+						
+						<ul class="nav navbar-nav">',$def_project,$def_project);
 		//
 		foreach($nav as $k=>$v){
 			$class="";
