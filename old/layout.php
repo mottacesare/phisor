@@ -47,11 +47,8 @@ Class layout{
 						<a href="../" class="navbar-brand">%s</a>
 					</div>
 					<div class="navbar-collapse collapse" id="navbar-main">
-						<ul class="nav navbar-nav navbar-left">
-							<li><a href="http://www.phisor.it/" target="_blank">%s</a></li>
-						</ul>
 						
-						<ul class="nav navbar-nav">',$def_project,$def_project);
+						<ul class="nav navbar-nav">',$def_project);
 		//
 		foreach($nav as $k=>$v){
 			$class="";
